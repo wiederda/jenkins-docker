@@ -19,7 +19,7 @@ RUN chown root:root docker/docker \
 && groupadd -r docker \
 && usermod -aG docker ${JENKINS_USER} \
 && rm /tmp/install.sh \
-&& apt-get remove -y curl wget
+&& apt-get remove -y wget
  
 USER ${JENKINS_USER}
 WORKDIR ${JENKINS_HOME}
